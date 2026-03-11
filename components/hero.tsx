@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen overflow-hidden bg-background">
+    <section className="relative min-h-screen overflow-hidden" style={{ backgroundColor: "#f4f2ed" }}>
       {/* Mint/sage accent block - bottom right */}
       <div 
         className="absolute bottom-0 right-0 w-1/2 h-[25%]"
