@@ -5,11 +5,13 @@ import "./globals.css";
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
+  display: "swap",
 });
 
 const playfair = Playfair_Display({
   variable: "--font-playfair",
   subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -22,20 +24,12 @@ export const metadata: Metadata = {
     "Naira Faraj",
     "luxury interiors",
     "home design",
-    "residential design",
-    "commercial design",
   ],
   authors: [{ name: "Naira Faraj" }],
-  openGraph: {
-    title: "Naira Faraj | Interior Designer",
-    description:
-      "An elegant studio for bespoke interior design. Where vision meets craftsmanship.",
-    type: "website",
-  },
 };
 
 export const viewport: Viewport = {
-  themeColor: "#f5f3ef",
+  themeColor: "#f4f2ed",
   width: "device-width",
   initialScale: 1,
 };
@@ -46,10 +40,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${inter.variable} ${playfair.variable} antialiased`}>
-        {children}
-      </body>
+    <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
+      <body className="font-sans antialiased">{children}</body>
     </html>
   );
 }

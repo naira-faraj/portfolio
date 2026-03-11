@@ -29,51 +29,50 @@ const projects = [
 
 export function Portfolio() {
   return (
-    <section id="portfolio" className="py-28 px-8 sm:px-12 md:px-16 lg:px-20 xl:px-28 bg-background">
+    <section id="portfolio" className="py-24 px-8 sm:px-12 md:px-16 lg:px-20 xl:px-28 bg-background">
       {/* Section Header */}
-      <div className="max-w-7xl mx-auto mb-20">
-        <div className="flex items-center gap-5 mb-8">
-          <div className="w-12 h-[1px] bg-foreground/30" />
-          <span className="text-[11px] tracking-[0.3em] uppercase text-muted-foreground font-medium">
+      <div className="max-w-6xl mx-auto mb-16">
+        <div className="flex items-center gap-4 mb-6">
+          <div className="w-10 h-px bg-foreground/40" />
+          <span className="text-xs tracking-widest uppercase text-muted-foreground">
             Selected Works
           </span>
         </div>
-        <h2 className="font-serif text-5xl md:text-6xl lg:text-7xl text-foreground tracking-[-0.02em]">
+        <h2 className="font-serif text-5xl md:text-6xl text-foreground">
           Portfolio
         </h2>
       </div>
 
       {/* Projects Grid */}
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
         {projects.map((project, index) => (
           <article
             key={project.id}
             className={`group cursor-pointer ${
-              index % 2 === 1 ? "md:mt-20" : ""
+              index % 2 === 1 ? "md:mt-16" : ""
             }`}
           >
-            <div className="relative overflow-hidden mb-6">
-              <div className="aspect-[4/5] relative bg-muted/10">
+            <div className="relative overflow-hidden mb-5">
+              <div className="aspect-[4/5] relative">
                 <Image
                   src={project.image}
                   alt={project.title}
                   fill
-                  className="object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 ease-out"
+                  className="object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>
-              {/* Hover Overlay */}
-              <div className="absolute inset-0 bg-foreground/0 group-hover:bg-foreground/5 transition-colors duration-500" />
             </div>
             <div className="flex items-start justify-between">
               <div>
-                <h3 className="font-serif text-2xl text-foreground mb-2 tracking-[-0.01em]">
+                <h3 className="font-serif text-xl text-foreground mb-1">
                   {project.title}
                 </h3>
-                <p className="text-[13px] text-muted-foreground tracking-wide uppercase">
+                <p className="text-xs text-muted-foreground tracking-widest uppercase">
                   {project.category}
                 </p>
               </div>
-              <span className="font-serif italic text-muted text-xl">
+              <span className="font-serif italic text-muted text-lg">
                 0{project.id}
               </span>
             </div>
