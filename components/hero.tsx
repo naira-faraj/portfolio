@@ -24,24 +24,36 @@ export function Hero() {
           <div className="max-w-lg">
             {/* Tagline with line */}
             <div className="flex items-center gap-4 mb-10">
-              <div className="w-10 h-px bg-foreground/40" />
-              <span className="text-xs tracking-widest uppercase text-muted-foreground">
+              <div className="w-10 h-px" style={{ backgroundColor: "rgba(26, 23, 22, 0.4)" }} />
+              <span 
+                className="text-xs tracking-widest uppercase"
+                style={{ color: "#6d6762" }}
+              >
                 The Digital Renaissance
               </span>
             </div>
 
             {/* Main Headline */}
             <h1 className="mb-8">
-              <span className="block font-serif text-6xl sm:text-7xl md:text-8xl lg:text-7xl xl:text-8xl text-foreground leading-none tracking-tight">
+              <span 
+                className="block text-6xl sm:text-7xl md:text-8xl lg:text-7xl xl:text-8xl leading-none tracking-tight"
+                style={{ color: "#1a1716", fontFamily: "var(--font-playfair), Georgia, serif" }}
+              >
                 Artistry
               </span>
-              <span className="block font-serif text-6xl sm:text-7xl md:text-8xl lg:text-7xl xl:text-8xl text-foreground leading-none tracking-tight italic">
+              <span 
+                className="block text-6xl sm:text-7xl md:text-8xl lg:text-7xl xl:text-8xl leading-none tracking-tight italic"
+                style={{ color: "#1a1716", fontFamily: "var(--font-playfair), Georgia, serif" }}
+              >
                 Redefined.
               </span>
             </h1>
 
             {/* Description */}
-            <p className="text-base text-muted-foreground leading-relaxed mb-10 max-w-sm">
+            <p 
+              className="text-base leading-relaxed mb-10 max-w-sm"
+              style={{ color: "#6d6762" }}
+            >
               An elegant studio for bespoke interior design. Where vision meets craftsmanship to create spaces that inspire.
             </p>
 
@@ -49,14 +61,16 @@ export function Hero() {
             <div className="flex flex-wrap items-center gap-4">
               <Link
                 href="#portfolio"
-                className="inline-flex items-center gap-3 px-6 py-3.5 bg-foreground text-background text-sm font-medium tracking-wide hover:bg-foreground/90 transition-colors"
+                className="inline-flex items-center gap-3 px-6 py-3.5 text-sm font-medium tracking-wide transition-colors"
+                style={{ backgroundColor: "#1a1716", color: "#f4f2ed" }}
               >
                 Begin Creating
                 <ArrowRight className="w-4 h-4" strokeWidth={2} />
               </Link>
               <Link
                 href="#about"
-                className="inline-flex items-center gap-3 px-6 py-3.5 border border-foreground text-foreground text-sm font-medium tracking-wide hover:bg-foreground hover:text-background transition-colors"
+                className="inline-flex items-center gap-3 px-6 py-3.5 text-sm font-medium tracking-wide transition-colors border"
+                style={{ borderColor: "#1a1716", color: "#1a1716" }}
               >
                 Read Manifesto
                 <BookOpen className="w-4 h-4" strokeWidth={2} />
@@ -68,11 +82,14 @@ export function Hero() {
         {/* Right Image Section */}
         <div className="hidden lg:flex items-center justify-center relative px-8">
           {/* Polaroid container */}
-          <div className="relative" style={{ transform: "rotate(4deg)" }}>
+          <div style={{ transform: "rotate(4deg)" }}>
             {/* Polaroid frame */}
             <div 
-              className="bg-white p-3 pb-14 shadow-2xl"
-              style={{ boxShadow: "0 25px 60px -15px rgba(0,0,0,0.2)" }}
+              className="p-3 pb-14"
+              style={{ 
+                backgroundColor: "#ffffff",
+                boxShadow: "0 25px 60px -15px rgba(0,0,0,0.2)"
+              }}
             >
               <div className="relative w-72 h-80 xl:w-80 xl:h-96 overflow-hidden">
                 <Image
@@ -85,7 +102,10 @@ export function Hero() {
                 />
               </div>
               {/* Caption */}
-              <p className="absolute bottom-4 left-0 right-0 text-center font-serif italic text-sm text-muted-foreground">
+              <p 
+                className="absolute bottom-4 left-0 right-0 text-center italic text-sm"
+                style={{ color: "#6d6762", fontFamily: "var(--font-playfair), Georgia, serif" }}
+              >
                 Figure 1. Signature Design
               </p>
             </div>
@@ -95,7 +115,7 @@ export function Hero() {
 
       {/* Mobile image */}
       <div className="lg:hidden absolute bottom-20 right-4 w-36" style={{ transform: "rotate(3deg)" }}>
-        <div className="bg-white p-2 pb-6 shadow-xl">
+        <div className="p-2 pb-6" style={{ backgroundColor: "#ffffff", boxShadow: "0 10px 30px -10px rgba(0,0,0,0.2)" }}>
           <div className="relative w-full aspect-[3/4] overflow-hidden">
             <Image
               src="/images/hero-interior.jpg"

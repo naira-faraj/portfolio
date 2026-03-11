@@ -29,16 +29,26 @@ const projects = [
 
 export function Portfolio() {
   return (
-    <section id="portfolio" className="py-24 px-8 sm:px-12 md:px-16 lg:px-20 xl:px-28 bg-background">
+    <section 
+      id="portfolio" 
+      className="py-24 px-8 sm:px-12 md:px-16 lg:px-20 xl:px-28"
+      style={{ backgroundColor: "#f4f2ed" }}
+    >
       {/* Section Header */}
       <div className="max-w-6xl mx-auto mb-16">
         <div className="flex items-center gap-4 mb-6">
-          <div className="w-10 h-px bg-foreground/40" />
-          <span className="text-xs tracking-widest uppercase text-muted-foreground">
+          <div className="w-10 h-px" style={{ backgroundColor: "rgba(26, 23, 22, 0.4)" }} />
+          <span 
+            className="text-xs tracking-widest uppercase"
+            style={{ color: "#6d6762" }}
+          >
             Selected Works
           </span>
         </div>
-        <h2 className="font-serif text-5xl md:text-6xl text-foreground">
+        <h2 
+          className="text-5xl md:text-6xl"
+          style={{ color: "#1a1716", fontFamily: "var(--font-playfair), Georgia, serif" }}
+        >
           Portfolio
         </h2>
       </div>
@@ -65,14 +75,23 @@ export function Portfolio() {
             </div>
             <div className="flex items-start justify-between">
               <div>
-                <h3 className="font-serif text-xl text-foreground mb-1">
+                <h3 
+                  className="text-xl mb-1"
+                  style={{ color: "#1a1716", fontFamily: "var(--font-playfair), Georgia, serif" }}
+                >
                   {project.title}
                 </h3>
-                <p className="text-xs text-muted-foreground tracking-widest uppercase">
+                <p 
+                  className="text-xs tracking-widest uppercase"
+                  style={{ color: "#6d6762" }}
+                >
                   {project.category}
                 </p>
               </div>
-              <span className="font-serif italic text-muted text-lg">
+              <span 
+                className="italic text-lg"
+                style={{ color: "#a09a94", fontFamily: "var(--font-playfair), Georgia, serif" }}
+              >
                 0{project.id}
               </span>
             </div>
