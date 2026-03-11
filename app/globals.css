@@ -4,19 +4,19 @@
   --font-sans: var(--font-inter);
   --font-serif: var(--font-playfair);
 
-  --color-background: #f5f3ef;
-  --color-foreground: #2d2926;
-  --color-muted: #8a8580;
-  --color-muted-foreground: #6b6560;
-  --color-accent: #e8d5c4;
-  --color-accent-foreground: #2d2926;
-  --color-primary: #2d2926;
-  --color-primary-foreground: #f5f3ef;
-  --color-secondary: #d4e4dc;
-  --color-secondary-foreground: #2d2926;
-  --color-border: #d4cfc8;
+  --color-background: #f4f2ed;
+  --color-foreground: #1a1716;
+  --color-muted: #a09a94;
+  --color-muted-foreground: #6d6762;
+  --color-accent: #e6cdb8;
+  --color-accent-foreground: #1a1716;
+  --color-primary: #1a1716;
+  --color-primary-foreground: #f4f2ed;
+  --color-secondary: #c8ded4;
+  --color-secondary-foreground: #1a1716;
+  --color-border: #d9d4cd;
   --color-card: #ffffff;
-  --color-card-foreground: #2d2926;
+  --color-card-foreground: #1a1716;
 }
 
 * {
